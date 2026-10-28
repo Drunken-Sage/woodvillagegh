@@ -8,7 +8,7 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0);
+      setIsScrolled(window.scrollY > 5);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -16,6 +16,7 @@ const Header = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
 
   const navItems = [
     { name: 'Home', href: '#home' },
@@ -28,18 +29,18 @@ const Header = () => {
 
   return (
     <header
-      className={`pl-auto justify-around fixed inset-x-0 top-0 z-50 transition-[background-color,box-shadow,backdrop-filter] duration-300 ${
+      className={`pl-auto justify-between fixed inset-x-0 top-0 z-50 transition-[background-color,box-shadow,backdrop-filter] duration-300 ${
         isScrolled
-          ? 'bg-transparent shadow-none backdrop-blur-none'
-          : 'bg-white'
+          ? 'bg-transparent text-black backdrop-blur-sm shadow-xl'
+          : 'bg-white/50 text-black backdrop-blur-sm shadow-xl'
       }`}
     >
       <nav
-        className="relative mx-auto flex w-[calc(100%-1rem)] max-w-300 items-center justify-between gap-6 py-3 min-[721px]:w-[calc(100%-2rem)] min-[721px]:py-4"
+        className="relative mx-auto flex w-[calc(100%-1rem)] max-w-400 items-center justify-between gap-6 py-3 min-[721px]:w-[calc(100%-2rem)] min-[721px]:py-4"
         aria-label="Main navigation"
       >
-        <div className="flex h-13 w-13 shrink-0 items-center justify-center" aria-label="Wood Village home">
-          <img className="h-13 w-13 object-contain" src={logo} alt="Wood Village logo" />
+        <div className="flex h-13 w-19 shrink-0 items-center justify-center" aria-label="Wood Village home">
+          <img className="object-contain w-max" src={logo} alt="Wood Village logo" />
         </div>
 
         <div
@@ -54,7 +55,11 @@ const Header = () => {
             <a
               key={item.name}
               href={item.href}
-              className="relative inline-block text-[0.96rem] font-semibold text-black no-underline transition-[color,padding-left] duration-200 after:absolute after:bottom-[-0.35rem] after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-[#25d366] after:transition-transform after:duration-300 after:content-[''] hover:text-white hover:after:scale-x-100 focus-visible:text-neutral-800 focus-visible:outline-none focus-visible:after:scale-x-100 max-[640px]:w-full max-[640px]:whitespace-nowrap max-[640px]:py-1 max-[640px]:text-[0.85rem] max-[640px]:text-white hover:pl-1"
+              className={`relative inline-block text-[0.96rem] font-semibold no-underline transition-[color,padding-left] duration-200 after:absolute after:bottom-[-0.35rem] after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-[#25d366] after:transition-transform after:duration-300 after:content-[''] hover:after:scale-x-100 focus-visible:outline-none focus-visible:after:scale-x-100 max-[640px]:w-full max-[640px]:whitespace-nowrap max-[640px]:py-1 max-[640px]:text-[0.85rem] max-[640px]:text-white hover:pl-1 ${
+                isScrolled
+                  ? 'text-black hover:text-[#2E7D32] focus-visible:text-neutral-800'
+                  : 'text-black hover:text-[#25d366] focus-visible:text-white'
+              }`}
               onClick={closeMenu}
             >
               {item.name}
@@ -69,9 +74,9 @@ const Header = () => {
           aria-expanded={isMobileMenuOpen}
           onClick={() => setIsMobileMenuOpen((current) => !current)}
         >
-          <span className="block h-0.5 w-4.5 rounded-full bg-black" />
-          <span className="block h-0.5 w-4.5 rounded-full bg-black" />
-          <span className="block h-0.5 w-4.5 rounded-full bg-black" />
+          <span className="block h-0.5 w-4.5 rounded-full bg-current" />
+          <span className="block h-0.5 w-4.5 rounded-full bg-current" />
+          <span className="block h-0.5 w-4.5 rounded-full bg-current" />
         </button>
 
         <a

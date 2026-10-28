@@ -1,104 +1,190 @@
 import { Button } from './ui/button';
-
+import TiltedGridHero from './ui/tilted-grid-hero';
+import woodFloorGrains from '../assets/images/woodFloorGrains.webp';
+import treeTrunkForest from '../assets/images/treeTrunkForest.webp';
+import treeTrunkClearing from '../assets/images/treeTrunkClearing.webp';
+import treeTopsWithDirtPath from '../assets/images/treeTopsWithDirtPath.webp';
+import treeTopsAngled from '../assets/images/treeTopsAngled.webp';
+import treeTops from '../assets/images/treeTops.webp';
+import treeCrossSection from '../assets/images/treeCrossSection.webp';
+import treeCanopy from '../assets/images/treeCanopy.webp';
+import sawedWoodStack from '../assets/images/sawedWoodStack.webp';
+import ruggedLoggingTruck from '../assets/images/Rugged Logging Truck in the Forest.webp';
+import clockIcon from '../assets/icons/wait.gif';
+import leafIcon from '../assets/icons/leaves.gif';
+import deliveryIcon from '../assets/icons/truck.gif';
+import sawedWood from '../assets/images/sawedWood.webp';
+import planksImage from '../assets/images/planksImage.webp';
+import logsImage from '../assets/images/logs.webp';
+import logInspectionImage from '../assets/images/logInspectionImage.webp';
+import godRaysInWoods from '../assets/images/godRaysInWoods.webp';
+import forestImage from '../assets/images/forestImage.webp';
+import chainsawOnLog from '../assets/images/chainsawOnLog.webp';
+import chainsawMan from '../assets/images/chainsawMan.webp';
+import forestIcon from '../assets/icons/forest-96.webp';
+import rulerIcon from '../assets/icons/ruler-100.webp';
+import truckIcon from '../assets/icons/semi-truck-side-view-50.webp';
+import warehouseIcon from '../assets/icons/warehouse-64.webp';
 
 const assurances = [
   {
     index: 1,
-    icon: '',
+    icon: leafIcon,
+    alt: 'leaf icon',
     title: '100% Legally Sourced',
+    description: `Timber sourced in line with Ghana's forestry and timber regulations.`
   },
   {
     index: 2,
-    icon: '',
+    icon: clockIcon,
+    alt: 'clock icon',
     title: '10 Years of Experience',
+    description: 'A decade of experience sourcing, processing, and supplying quality Ghanaian timber.'
   },
   {
     index: 3,
-    icon: '',
-    description: 'Delivery Available'
+    icon: deliveryIcon,
+    alt: 'delivery icon',
+    title: 'Delivery Available',
+    description: 'Delivery to Kasoa Timber Market and beyond.'
   }
 ]
 
 const processingSteps = [
   {
     index: 1,
-    icon: '',
+    icon: forestIcon,
     title: 'Log Procurement and Trade',
     description: 'Sourcing quality logs from the Ashanti Region for your timber needs.'
   },
   {
     index: 2,
-    icon: '',
+    icon: rulerIcon,
     title: 'Processing',
     description: 'Precision processing into boards and planks, sized for your project.'
   },
   {
     index: 3,
-    icon: '',
+    icon: warehouseIcon,
     title: 'Distribution',
     description: 'Supplying individual builders and large-scale timber distributors.'
   },
   {
     index: 4,
-    icon: '',
+    icon: truckIcon,
     title: 'Delivery',
     description: 'Moving your timber to Kasoa Timber Market and beyond.'
   }
 ]
 
+const timberGalleryImages = [
+  { src: forestImage, alt: 'Forest in Ghana' },
+  { src: treeCanopy, alt: 'Tree canopy' },
+  { src: treeTops, alt: 'Tree tops in the forest' },
+  { src: treeTopsAngled, alt: 'Angled view of tree tops' },
+  { src: treeTopsWithDirtPath, alt: 'Forest with a dirt path' },
+  { src: treeTrunkForest, alt: 'Tree trunks in the forest' },
+  { src: treeTrunkClearing, alt: 'Tree trunks in a clearing' },
+  { src: treeCrossSection, alt: 'Cross-section of a tree trunk' },
+  { src: logsImage, alt: 'Timber logs' },
+  { src: logInspectionImage, alt: 'Timber log inspection' },
+  { src: chainsawMan, alt: 'Worker cutting timber with a chainsaw' },
+  { src: chainsawOnLog, alt: 'Chainsaw resting on a log' },
+  { src: sawedWood, alt: 'Freshly sawn timber' },
+  { src: sawedWoodStack, alt: 'Stack of freshly sawn timber' },
+  { src: planksImage, alt: 'Timber planks ready for use' },
+  { src: woodFloorGrains, alt: 'Wood grain texture' },
+  { src: godRaysInWoods, alt: 'Sunlight shining through the woods' },
+  { src: ruggedLoggingTruck, alt: 'Logging truck in the forest' },
+];
+
 const Home = () => {
   return(
-    <div className="w-auto mt-[5rem] p-auto bg-green-950">
-      <div>
-        <span>GHANAIAN LOCAL TIMBER EXPERTISE</span>
-      </div>
-      <div>Quality Ghanaian Timber, From the Forest to Your Site.</div>
-      <div>Procuring, processing, and delivering premium logs, boards, and planks from the Ashanti Region to Kasoa Timber Market and beyond.</div>
-      <div>
-        <Button>View Our Wood Species</Button>
-        <Button>Contact Us On Whatsapp</Button>
-      </div>
-      <section className="flex">
+    <div className="w-auto p-auto bg-green-950">
+      <section className="relative isolate flex flex-col text-white overflow-hidden bg-green-950 p-20 pt-40">
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 -z-10 bg-cover bg-center"
+          style={{
+            backgroundImage: `url(${treeTops})`,
+            maskImage: 'linear-gradient(to right, transparent 0%, black 100%)',
+            WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 100%)',
+          }}
+        />
+        <div className="relative">
+          <span className="text-sm text-[#D6DFD4] py-3.5">GHANAIAN LOCAL TIMBER EXPERTISE</span>
+        </div>
+        <div className="relative max-w-5xl whitespace-normal text-5xl font-bold py-3.5">Quality Ghanaian Timber, From the Forest to Your Site.</div>
+        <div className="relative max-w-2xl whitespace-normal text-lg text-{#D6DFD4] py-3.5">Procuring, processing, and delivering premium logs, boards, and planks from the Ashanti Region to Kasoa Timber Market and beyond.</div>
+        <div className="relative text-sm font-semibold py-3.5">
+          <Button className="bg-[#2E7D32] p-8 py-6 mr-1.5 hover:bg-[#3a8a3e] hover:cursor-pointer">View Our Wood Species</Button>
+          <Button className="border-0 bg-transparent p-8 ml-1.5 py-6 ring-1 ring-inset ring-white hover:cursor-pointer hover:bg-white/20">Contact Us On Whatsapp</Button>
+        </div>
+      </section>
+      <section className="flex bg-[#FFFFFF] justify-items-center py-5 px-4">
         {assurances.map((assurance, index) => (
           <div
             key={index}
-            className="flex flex-1 p-1 flex-row justify-center items-center bg-[#DEDFD7] h-10"
+            className="flex flex-1 border-0 items-center min-h-10 h-auto justify-center"
           >
-            <div className="h-7">{assurance.icon}</div>
-            <div className="flex flex-col items-start">
-              <h4 className="text-black font-semibold">{assurance.title}</h4>
-              <p className="text-black font-semibold">{assurance.description}</p>
+            <img src={assurance.icon} alt={assurance.alt} className="h-7 mr-0.5 w-7 object-contain" />
+            <div className="flex flex-col ml-2">
+              <h4 className="text-black font-semibold text-sm m-0.5">{assurance.title}</h4>
+              <p className="text-[#626960] font-semibold text-xs m-0.5">{assurance.description}</p>
             </div>
           </div>
           ))
         }
       </section>
-      <section>
+      <section className="flex bg-[#E8DFD0] flex-col justify-items-center p-20">
+        <div className="">
+          <span className="text-[#8B5E3C] text-xs font-semibold">ROOTED IN GHANA</span>
+        </div>
+        <h2 className=" my-5">
+          <span className="text-3xl font-bold">Your Trusted Partner in Timber Trade</span>
+        </h2>
+        <span className="text-base text-[#626960]">
+          Woodvillage Ghana Ltd. is a leading supplier of high-quality wood products. We manage the entire process, from sustainable procurement in the Ashanti Region forests to precision processing into boards and planks. Whether you are an individual builder or a large-scale distributor, we deliver the right wood at the right size.
+        </span>
+        <TiltedGridHero
+         images={timberGalleryImages}
+         className="h-72 w-full rounded-lg border border-border bg-transparent">
+        </TiltedGridHero>
+      </section>
+      <section className="flex flex-col bg-[#F7F5F0] justify-items-center p-20">
         <div>
-          <div>ROOTED IN GHANA</div>
-          <div>Woodvillage Ghana Ltd. is a leading supplier of high-quality wood products. We manage the entire process, from sustainable procurement in the Ashanti Region forests to precision processing into boards and planks. Whether you are an individual builder or a large-scale distributor, we deliver the right wood at the right size.</div>
+          <span className="text-[#8B5E3C] text-xs font-semibold">WHAT WE DO</span>
         </div>
         <div>
-          {/* image of processing */}
+          <span className="text-3xl font-bold">Timber support, at every step.</span>
+        </div>
+        <div className="flex flex-row gap-4 justify-between mt-10">
+          {
+            processingSteps.map((step, index) => (
+              <div key={index} className="flex flex-col bg-white rounded-xl p-5 w-1/4">
+                <div className="h-10 w-10">
+                  <img src={step.icon} alt="" aria-hidden="true" className="h-3/4 w-3/4 object-contain" />
+                </div>
+                <div className="text-black font-bold text-xl p-1.5 pl-0.5">{step.title}</div>
+                <div className="text-[#626960] text-sm p-0.5">{step.description}</div>
+              </div>
+            ))
+          }
         </div>
       </section>
-      <section>
-        <div>
-          <span>WHAT WE DO</span>
-        </div>
-        <div>
-          <span>Timber support, at every step.</span>
-        </div>
-        <div>
-        {
-          processingSteps.map((step, index) => (
-            <div key={index} className="flex flex-col items-center">
-              <div className="h-10">{step.icon}</div>
-              <div className="text-black font-semibold">{step.title}</div>
-              <div className="text-black font-semibold">{step.description}</div>
+      <section className="p-14 bg-[#2E7D32]">
+        <div className="flex items-center justify-between">
+          <div>
+            <div className="font-bold text-3xl text-white mb-2">
+              <span>Need a custom size? Talk to us today.</span>
             </div>
-          ))
-        }
+            <div>
+              <span className="text-white">Tell us the dimensions and quantity you need.</span>
+            </div>
+          </div>
+          <div>
+            <Button className="border-0 bg-transparent p-8 ml-1.5 py-6 ring-1 ring-inset ring-white hover:cursor-pointer hover:bg-white/20">Contact Us On Whatsapp</Button>
+          </div>
         </div>
       </section>
     </div>
