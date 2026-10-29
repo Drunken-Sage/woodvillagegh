@@ -2,7 +2,7 @@ import logo from '../assets/images/logo.png'
 
 const Footer = () => {
  return(
-  <section className="flex bg-[#182C20] text-white justify-between items-start p-15">
+  <section className="flex gap-6 sm:flex-row flex-col bg-[#182C20] text-white justify-between items-start p-15">
     <div className="flex flex-col">
       <img src={logo} alt="woodvillage logo" className="h-20 w-15 object-contain"/>
       <div className="text-lg">Quality Ghanaian Timber</div>

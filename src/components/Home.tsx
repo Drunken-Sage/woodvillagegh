@@ -101,7 +101,7 @@ const timberGalleryImages = [
 const Home = () => {
   return(
     <div className="w-auto p-auto bg-green-950">
-      <section className="relative isolate flex flex-col text-white overflow-hidden bg-green-950 p-20 pt-40">
+      <section className="relative isolate flex flex-col text-white overflow-hidden bg-green-950 p-6 pt-26 sm:pt-40 sm:px-20">
         <div
           aria-hidden="true"
           className="absolute inset-0 -z-10 bg-cover bg-center"
@@ -112,20 +112,20 @@ const Home = () => {
           }}
         />
         <div className="relative">
-          <span className="text-sm text-[#D6DFD4] py-3.5">GHANAIAN LOCAL TIMBER EXPERTISE</span>
+          <span className="text-xs text-[#D6DFD4] py-3.5 sm:text-sm">GHANAIAN LOCAL TIMBER EXPERTISE</span>
         </div>
-        <div className="relative max-w-5xl whitespace-normal text-5xl font-bold py-3.5">Quality Ghanaian Timber, From the Forest to Your Site.</div>
-        <div className="relative max-w-2xl whitespace-normal text-lg text-{#D6DFD4] py-3.5">Procuring, processing, and delivering premium logs, boards, and planks from the Ashanti Region to Kasoa Timber Market and beyond.</div>
-        <div className="relative text-sm font-semibold py-3.5">
+        <div className="relative max-w-5xl whitespace-normal text-3xl font-bold py-3.5 sm:text-5xl">Quality Ghanaian Timber, From the Forest to Your Site.</div>
+        <div className="relative max-w-2xl whitespace-normal sm:text-lg text-{#D6DFD4] py-3.5 text-sm">Procuring, processing, and delivering premium logs, boards, and planks from the Ashanti Region to Kasoa Timber Market and beyond.</div>
+        <div className="relative text-sm font-semibold py-3.5 flex flex-col sm:flex-row gap-3">
           <Button className="bg-[#2E7D32] p-8 py-6 mr-1.5 hover:bg-[#3a8a3e] hover:cursor-pointer">View Our Wood Species</Button>
           <Button className="border-0 bg-transparent p-8 ml-1.5 py-6 ring-1 ring-inset ring-white hover:cursor-pointer hover:bg-white/20">Contact Us On Whatsapp</Button>
         </div>
       </section>
-      <section className="flex bg-[#FFFFFF] justify-items-center py-5 px-4">
+      <section className="flex bg-[#FFFFFF] justify-items-center py-5 px-4 flex-col sm:flex-row gap-6 sm:gap-0 justify-center">
         {assurances.map((assurance, index) => (
           <div
             key={index}
-            className="flex flex-1 border-0 items-center min-h-10 h-auto justify-center"
+            className="flex flex-1 border-0 items-center min-h-10 h-auto"
           >
             <img src={assurance.icon} alt={assurance.alt} className="h-7 mr-0.5 w-7 object-contain" />
             <div className="flex flex-col ml-2">
@@ -136,14 +136,14 @@ const Home = () => {
           ))
         }
       </section>
-      <section className="flex bg-[#E8DFD0] flex-col justify-items-center p-20">
+      <section className="flex bg-[#E8DFD0] flex-col justify-items-center sm:p-20 py-12 px-6">
         <div className="">
           <span className="text-[#8B5E3C] text-xs font-semibold">ROOTED IN GHANA</span>
         </div>
         <h2 className=" my-5">
           <span className="text-3xl font-bold">Your Trusted Partner in Timber Trade</span>
         </h2>
-        <span className="text-base text-[#626960]">
+        <span className="text-base text-[#626960] ">
           Woodvillage Ghana Ltd. is a leading supplier of high-quality wood products. We manage the entire process, from sustainable procurement in the Ashanti Region forests to precision processing into boards and planks. Whether you are an individual builder or a large-scale distributor, we deliver the right wood at the right size.
         </span>
         <TiltedGridHero
@@ -151,17 +151,17 @@ const Home = () => {
          className="h-72 w-full rounded-lg border border-border bg-transparent">
         </TiltedGridHero>
       </section>
-      <section className="flex flex-col bg-[#F7F5F0] justify-items-center p-20">
+      <section className="flex flex-col bg-[#F7F5F0] justify-items-center sm:p-20 py-12 px-6  ">
         <div>
           <span className="text-[#8B5E3C] text-xs font-semibold">WHAT WE DO</span>
         </div>
         <div>
-          <span className="text-3xl font-bold">Timber support, at every step.</span>
+          <span className="sm:text-3xl font-bold text-2xl">Timber support, at every step.</span>
         </div>
-        <div className="flex flex-row gap-4 justify-between mt-10">
+        <div className="flex flex-col sm:flex-row gap-4 justify-between mt-10">
           {
             processingSteps.map((step, index) => (
-              <div key={index} className="flex flex-col bg-white rounded-xl p-5 w-1/4">
+              <div key={index} className="flex flex-col bg-white rounded-xl p-5 sm:w-1/4">
                 <div className="h-10 w-10">
                   <img src={step.icon} alt="" aria-hidden="true" className="h-3/4 w-3/4 object-contain" />
                 </div>
@@ -172,8 +172,8 @@ const Home = () => {
           }
         </div>
       </section>
-      <section className="p-14 bg-[#2E7D32]">
-        <div className="flex items-center justify-between">
+      <section className="px-6 py-12 sm:p-14 bg-[#2E7D32]">
+        <div className="flex flex-col sm:flex-row items-center justify-between">
           <div>
             <div className="font-bold text-3xl text-white mb-2">
               <span>Need a custom size? Talk to us today.</span>
@@ -183,7 +183,7 @@ const Home = () => {
             </div>
           </div>
           <div>
-            <Button className="border-0 bg-transparent p-8 ml-1.5 py-6 ring-1 ring-inset ring-white hover:cursor-pointer hover:bg-white/20">Contact Us On Whatsapp</Button>
+            <Button className="border-0 bg-transparent p-8 ml-1.5 py-6 ring-1 ring-inset ring-white hover:cursor-pointer hover:bg-white/20 ">Contact Us On Whatsapp</Button>
           </div>
         </div>
       </section>

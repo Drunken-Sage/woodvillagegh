@@ -1,6 +1,6 @@
 import inspectionImg from './../assets/images/logInspectionImage.webp';
 import ruggedLoggingTruck from './../assets/images/Rugged Logging Truck in the Forest.webp';
-import treeTopsAngled from '../assets/images/treeTopsAngled.webp';
+import bossImage from '../assets/images/bossImage.webp';
 
 // import 
 import { Button } from './ui/button';
@@ -20,7 +20,10 @@ const About = () => {
           <span>About Us</span>
         </div>
       </section>
-      <section className="p-20 pl-0 flex gap-5 flex-row-reverse items-center justify-between">
+      <section className="p-20 pl-0 flex gap-5 items-center justify-between">
+        <div className="w-[33vw] shrink-0">
+          <img src={inspectionImg} alt="Log Inspection" className="block h-auto w-full object-contain" />
+        </div>
         <div className="max-w-3xl">
           <div className="flex flex-col gap-5">
             <p className="font-semibold text-xs">OUR STORY</p>
@@ -32,14 +35,11 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className="flex justify-center">
-          <img src={inspectionImg} alt="Log Inspection" className="object-contain h-8/10 w-96 scale-130" />
-        </div>
       </section>
       <section className="p-20 flex gap-3 flex-col bg-[#EDF4EA]">
         <div className="font-semibold text-xs text-[#8B5E3C]">THE PEOPLE BEHIND WOODVILLAGE</div>
         <div className="font-bold text-3xl">Our team</div>
-        <img src={inspectionImg} alt="Team Photo" className="h-96 w-3/5 self-center" />
+        <img src={bossImage} alt="Team Photo" className="h-96 aspect-video self-center" />
         <div className="border-l-[#8B5E3C] border-l-3 rounded-sm p-5 text-sm">
           <p className="font-black text-sm">Caption placeholder</p>
           <p className="text-[#626960]">Short owner or team caption to be supplied.</p>
