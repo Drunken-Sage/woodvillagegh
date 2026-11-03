@@ -41,7 +41,7 @@ const About = () => {
       </section>
       <section className="py-12 px-6 sm:p-20 flex gap-5 items-center justify-between sm:flex-row flex-col">
         <div className=" flex flex-col gap-3">
-          <p className="font-semibold text-xs text-[#8B5E3C]">
+          <div className="font-semibold text-xs text-[#8B5E3C]">
             <TextMotion
               text="OUR STORY"
               preset="slide"
@@ -51,7 +51,7 @@ const About = () => {
               replay={false}
               style={{width: "100%"}}
             />
-          </p>
+          </div>
           <h2 className="font-bold text-3xl  mb-3">
             <TextMotion
               text="Rooted in Quality, Growing with Trust"
@@ -68,7 +68,7 @@ const About = () => {
               <img src={inspectionImg} alt="Log Inspection" className="block h-auto w-full object-contain" />
             </div>
             <div className="text-[#626960]  text-base sm:text-lg flex flex-col gap-5 self-center ">
-              <p>
+              <div>
                 <TextMotion
                   text="Every plank we sell begins as a tree in the Ashanti forests. It stood for years before anyone cut it, and much of what Ghana builds depends on that patience: family homes, churches, schools, workshops. We keep that in mind when a log reaches our yard on Bawjiase Road. It has come a long way, and we want to make good use of it."
                   preset="drop"
@@ -80,8 +80,8 @@ const About = () => {
                   style={{width: "100%"}}
                   splitBy="line"
                 />
-              </p>
-              <p>
+              </div>
+              <div>
                 <TextMotion
                   text="Our work is slow and careful. Each log is sawn into boards and planks and sorted by size and species, because no two woods are alike. Odum is hard and enduring, Wawa is light and easy to work, and Cedar and Mahogany each have their own grain and use. Ask us what suits a roof, a door or a table, and we will tell you plainly, even when the honest answer is the cheaper wood. At Kasoa Timber Market you can walk the rows and put your hands on the wood before you buy."
                   preset="drop"
@@ -93,8 +93,8 @@ const About = () => {
                   replay={false}
                   style={{width: "100%"}}
                 />
-              </p>
-              <p>
+              </div>
+              <div>
                 <TextMotion
                   text="Some of our customers are finishing a single room, and others supply shops and builders along the road. We sell to both, deliver when asked, and cut special sizes when a job needs them. A carpenter who comes back or a distributor who trusts us with a contract means more to us than any one sale. If you are building something, come and tell us about it."
                   preset="drop"
@@ -106,7 +106,7 @@ const About = () => {
                   replay={false}
                   style={{width: "100%"}}
                 />
-              </p>
+              </div>
             </div>
           </div>
         </div>
@@ -137,7 +137,7 @@ const About = () => {
         </div>
         <img src={bossImage} alt="Team Photo" className="sm:h-96 aspect-video self-center" />
         <div className="border-l-[#8B5E3C] border-l-3 rounded-sm p-5 text-sm">
-          <p className="font-black text-sm mb-2">
+          <div className="font-black text-sm mb-2">
             <TextMotion
               text="Our Vision"
               preset="drop"
@@ -149,8 +149,8 @@ const About = () => {
               replay={false}
               style={{width: "100%"}}
             />
-          </p>
-          <p className="text-[#626960]">
+          </div>
+          <div className="text-[#626960]">
             <TextMotion
               text="Quality Timber Service All-Day Everyday To The Customer, For The Customer."
               preset="drop"
@@ -162,7 +162,7 @@ const About = () => {
               replay={false}
               style={{width: "100%"}}
             />
-          </p>
+          </div>
         </div>
       </section>
       <section className="px-6 py-12 sm:p-14 bg-[#2E7D32]">
