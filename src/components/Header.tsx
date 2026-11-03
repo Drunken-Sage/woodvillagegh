@@ -47,7 +47,7 @@ const Header = () => {
           className={`relative flex flex-1 items-center justify-center gap-8 transition-[opacity,transform] duration-200 max-[640px]:absolute max-[640px]:top-[calc(100%+0.5rem)] max-[640px]:right-0 max-[640px]:left-0 max-[640px]:flex-col max-[640px]:items-start max-[640px]:gap-4 max-[640px]:rounded-[18px] max-[640px]:border max-[640px]:border-slate-400/25 max-[640px]:bg-[#2E7D32] max-[640px]:p-4 max-[640px]:shadow-[0_18px_35px_rgba(15,23,42,0.35)] ${
             isMobileMenuOpen
             // rgb(15,23,42,0.35) is the same as rgb(130, 225, 111)
-              ? 'max-[640px]:translate-y-0 max-[640px]:opacity-100 max-[640px]:pointer-events-auto'
+              ? 'max-[640px]:translate-y-0 max-[640px]:opacity-100 max-[640px]:pointer-events-auto hover:text-white'
               : 'max-[640px]:-translate-y-2 max-[640px]:opacity-0 max-[640px]:pointer-events-none'
           }`}
         >
@@ -57,7 +57,7 @@ const Header = () => {
               href={item.href}
               className={`relative inline-block text-[0.96rem] font-semibold no-underline transition-[color,padding-left] duration-200 after:absolute after:bottom-[-0.35rem] after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-[#25d366] after:transition-transform after:duration-300 after:content-[''] hover:after:scale-x-100 focus-visible:outline-none focus-visible:after:scale-x-100 max-[640px]:w-full max-[640px]:whitespace-nowrap max-[640px]:py-1 max-[640px]:text-[0.85rem] max-[640px]:text-white hover:pl-1 ${
                 isScrolled
-                  ? 'text-black hover:text-[#2E7D32] focus-visible:text-neutral-800'
+                  ? 'text-black hover:text-[#25d366] focus-visible:text-neutral-800'
                   : 'text-black hover:text-[#25d366] focus-visible:text-white'
               }`}
               onClick={closeMenu}
