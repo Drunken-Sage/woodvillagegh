@@ -4,6 +4,8 @@ import bossImage from '../assets/images/bossImage.webp';
 import TextMotion from '../components/ui/TextMotion'
 import { Button } from './ui/button';
 
+
+//how am i supposed to fix these bugs i wonder
 const About = () => {
   return(
     <div>
