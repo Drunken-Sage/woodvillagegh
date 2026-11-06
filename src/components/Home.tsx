@@ -128,7 +128,7 @@ const fullWidth = {width: "100%"}
 const Home = () => {
   return(
     <div className="w-auto p-auto bg-green-950">
-      <section className="relative isolate flex flex-col text-white overflow-hidden bg-green-950 p-6 pt-26 sm:pt-40 sm:px-20">
+      <section id="home" className="scroll-mt-24 relative isolate flex flex-col text-white overflow-hidden bg-green-950 p-6 pt-26 sm:pt-40 sm:px-20">
         <div
           aria-hidden="true"
           className="absolute inset-0 -z-10 bg-cover bg-center"

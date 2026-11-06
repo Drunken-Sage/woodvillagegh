@@ -31,7 +31,7 @@ const SLICES = 1;
 // Camera distance from the screen, as a multiple of the cylinder's radius.
 // Just past the axis, so the ends come right up to the lens and swell; much
 // further back and the row flattens out however tight the cylinder.
-const CAMERA = 1.6;
+const CAMERA =1.7;
 
 /**
  * Cylinder radius, as a share of the hero's width, that puts the frame's
@@ -133,7 +133,7 @@ export function TiltedGridHero({
   aspectRatio = 16 / 9,
   gap = 6,
   axis = 56,
-  curve = 80,
+  curve = 60,
   fade = 12,
   children,
   className,

@@ -7,7 +7,7 @@ import { Button } from './ui/button';
 const About = () => {
   return(
     <div>
-      <section className="flex flex-col sm:px-20 sm:py-12 px-6 py-10 pb-20 sm:pb-28 bg-black] backdrop-blur-sm justify-items-center" style={{
+      <section id="about" className="scroll-mt-24 flex flex-col sm:px-20 sm:py-12 px-6 py-10 pb-20 sm:pb-28 bg-black] backdrop-blur-sm justify-items-center" style={{
             backgroundImage: `linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url(${ruggedLoggingTruck})`,
             maskImage: 'linear-gradient(to left, bg-transparent 0%, black 100%)',
             WebkitMaskImage: 'linear-gradient(to left, transparent 0%, black 100%)',
@@ -48,6 +48,7 @@ const About = () => {
               trigger="onView"
               duration={1.4}
               stagger={0.1}
+              splitBy="line"
               replay={false}
               style={{width: "100%"}}
             />
@@ -59,6 +60,7 @@ const About = () => {
               trigger="onView"
               duration={1.4}
               stagger={0.1}
+              splitBy="line"
               replay={false}
               style={{width: "100%"}}
             />
@@ -119,6 +121,7 @@ const About = () => {
               trigger="onView"
               duration={1.4}
               stagger={0.1}
+              splitBy="line"
               replay={false}
               style={{width: "100%"}}
           />
@@ -131,6 +134,7 @@ const About = () => {
               duration={1.4}
               stagger={0.1}
               delay={0.5}
+              splitBy="line"
               replay={false}
               style={{width: "100%"}}
            />

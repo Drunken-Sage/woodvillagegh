@@ -2,9 +2,9 @@ import logo from '../assets/images/logo.png'
 
 const Footer = () => {
  return(
-  <section className="flex gap-6 sm:flex-row flex-col bg-[#182C20] text-white justify-between items-start sm:p-15 py-12 px-6">
-    <div className="flex flex-col items-center">
-      <img src={logo} alt="woodvillage logo" className="h-20 w-15 object-contain"/>
+  <section id="contact" className="scroll-mt-24 flex gap-6 sm:flex-row flex-col bg-[#182C20] text-white justify-between items-start sm:p-15 py-12 px-6">
+    <div className="flex flex-col self-center ">
+      <img src={logo} alt="woodvillage logo" className="h-20 w-15 scale-200 object-contain self-center"/>
       <div className="text-lg text-center w-full">Quality Ghanaian Timber</div>
     </div>
     <div>
@@ -31,7 +31,7 @@ const Footer = () => {
     </div>
     <div>
       <div className="font-bold text-sm mb-3">Find Us</div>
-      <div className="text-[#D6DFD4] text-sm">Kasoa Timber Market, Bawjiase Road <br /> Kasoa, Ghana</div>
+      <div className="text-[#D6DFD4] text-sm">Kasoa Timber Market, Bawjiase Road - <br /> Kasoa, Ghana</div>
     </div>
   </section>
  )

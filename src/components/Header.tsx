@@ -39,9 +39,14 @@ const Header = () => {
         className="relative mx-auto flex w-[calc(100%-1rem)] max-w-400 items-center justify-between gap-6 py-3 min-[721px]:w-[calc(100%-2rem)] min-[721px]:py-4"
         aria-label="Main navigation"
       >
-        <div className="flex h-13 w-19 shrink-0 items-center justify-center" aria-label="Wood Village home">
+        <a
+          href="#home"
+          className="flex h-13 w-19 shrink-0 items-center justify-center"
+          aria-label="Wood Village home"
+          onClick={closeMenu}
+        >
           <img className="object-contain w-max" src={logo} alt="Wood Village logo" />
-        </div>
+        </a>
 
         <div
           className={`relative flex flex-1 items-center justify-center gap-8 transition-[opacity,transform] duration-200 max-[640px]:absolute max-[640px]:top-[calc(100%+0.5rem)] max-[640px]:right-0 max-[640px]:left-0 max-[640px]:flex-col max-[640px]:items-start max-[640px]:gap-4 max-[640px]:rounded-[18px] max-[640px]:border max-[640px]:border-slate-400/25 max-[640px]:bg-[#2E7D32] max-[640px]:p-4 max-[640px]:shadow-[0_18px_35px_rgba(15,23,42,0.35)] ${
