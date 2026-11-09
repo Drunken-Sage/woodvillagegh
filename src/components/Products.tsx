@@ -174,7 +174,7 @@ const services = [
           />
         </span>
       </div>
-      <div className="bg-[#EEE6D6] sm:py-16 sm:px-20 px-6 py-12 flex flex-col gap-10">
+      <div id="species" className="scroll-mt-24 bg-[#EEE6D6] sm:py-16 sm:px-20 px-6 py-12 flex flex-col gap-10">
         <div className="font-bold text-3xl text-[#1F2421] tracking-tight">
           <h3>
             <TextMotion
@@ -200,7 +200,7 @@ const services = [
                   renderFront={
                     <div className="h-full w-full rounded-2xl border bg-white p-6 shadow-[0_0_10px_rgba(0,0,0,0.1)] flex flex-col justify-center items-center gap-3">
                       <div className="text-black font-bold text-lg sm:text-xl">{species.species}</div>
-                      <div className='text-gray-500 text-sm text-[12px]'>Click for more information &gt;</div>
+                      <div className='text-gray-500 text-sm text-[12px]'>See More &gt;</div>
                     </div>
                   }
 

@@ -29,11 +29,7 @@ const Header = () => {
 
   return (
     <header
-      className={`pl-auto justify-between fixed inset-x-0 top-0 z-50 transition-[background-color,box-shadow,backdrop-filter] duration-300 ${
-        isScrolled
-          ? 'bg-transparent text-black backdrop-blur-sm shadow-xl'
-          : 'bg-white/50 text-black backdrop-blur-sm shadow-xl'
-      }`}
+      className={`pl-auto justify-between fixed inset-x-0 top-0 z-50 transition-[background-color,box-shadow,backdrop-filter] duration-300 bg-white/50 text-black backdrop-blur-sm shadow-xl`}
     >
       <nav
         className="relative mx-auto flex w-[calc(100%-1rem)] max-w-400 items-center justify-between gap-6 py-3 min-[721px]:w-[calc(100%-2rem)] min-[721px]:py-4"

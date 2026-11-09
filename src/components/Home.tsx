@@ -180,7 +180,12 @@ const Home = () => {
             />
         </div>
         <div className="relative text-sm font-semibold py-3.5 flex flex-col sm:flex-row gap-3">
-          <Button className="bg-[#2E7D32] p-8 py-6 mr-1.5 hover:bg-[#3a8a3e] hover:cursor-pointer">View Our Wood Species</Button>
+          <Button
+            render={<a href="#species" />}
+            className="bg-[#2E7D32] p-8 py-6 mr-1.5 hover:bg-[#3a8a3e] hover:cursor-pointer"
+          >
+            View Our Wood Species
+          </Button>
           <Button className="border-0 bg-transparent p-8 sm:ml-1.5 py-6 ring-1 ring-inset ring-white hover:cursor-pointer hover:bg-white/20">Contact Us On Whatsapp</Button>
         </div>
       </section>
