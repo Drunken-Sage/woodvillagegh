@@ -9,7 +9,7 @@ import { Button } from './ui/button';
 const About = () => {
   return(
     <div>
-      <section id="about" className="scroll-mt-24 flex flex-col sm:px-20 sm:py-12 px-6 py-10 pb-20 sm:pb-28 bg-black] backdrop-blur-sm justify-items-center" style={{
+      <section id="about" aria-label="About us section" className="scroll-mt-24 flex flex-col sm:px-20 sm:py-12 px-6 py-10 pb-20 sm:pb-28 bg-black] backdrop-blur-sm justify-items-center" style={{
             backgroundImage: `linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url(${ruggedLoggingTruck})`,
             maskImage: 'linear-gradient(to left, bg-transparent 0%, black 100%)',
             WebkitMaskImage: 'linear-gradient(to left, transparent 0%, black 100%)',
@@ -65,7 +65,7 @@ const About = () => {
             />
           <div className="flex-col lg:flex-row flex sm:gap-20 gap-8">
             <div className="lg:self-auto self-center w-[40vw] shrink-0">
-              <img src={inspectionImg} alt="Log Inspection" className="block h-auto w-full object-contain" />
+              <img src={inspectionImg} alt="WoodVillage team inspecting timber logs" className="block h-auto w-full object-contain" />
             </div>
             <div className="text-[#626960]  text-base sm:text-lg flex flex-col gap-5 self-center ">
               <TextMotion
@@ -108,7 +108,7 @@ const About = () => {
           </div>
         </div>
       </section>
-      <section className="py-12 px-6 sm:p-20 flex gap-3 flex-col bg-[#EDF4EA]">
+      <section className="py-12 px-6 sm:p-20 flex gap-3 flex-col bg-[#EDF4EA]" aria-label="Our team section">
         <TextMotion
               as="p"
               className="font-semibold text-xs text-[#8B5E3C]"
@@ -134,7 +134,7 @@ const About = () => {
               replay={false}
               style={{width: "100%"}}
            />
-        <img src={bossImage} alt="Team Photo" className="sm:h-96 aspect-video self-center" />
+        <img src={bossImage} alt="WoodVillage Ghana leadership team photo" className="sm:h-96 aspect-video self-center" />
         <div className="border-l-[#8B5E3C] border-l-3 rounded-sm p-5 text-sm">
           <TextMotion
               as="h3"
@@ -179,7 +179,12 @@ const About = () => {
               style={{width: "100%"}}
               />
           <div>
-            <Button className="border-0 bg-transparent p-8 ml-1.5 py-6 ring-1 ring-inset ring-white hover:cursor-pointer hover:bg-white/20">Contact</Button>
+            <Button
+              render={<a href="#contact" aria-label="Go to contact section" />}
+              className="border-0 bg-transparent p-8 ml-1.5 py-6 ring-1 ring-inset ring-white hover:cursor-pointer hover:bg-white/20"
+            >
+              Contact
+            </Button>
           </div>
         </div>
       </section>

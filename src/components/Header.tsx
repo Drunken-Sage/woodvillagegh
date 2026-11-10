@@ -32,6 +32,7 @@ const Header = () => {
       className={`pl-auto justify-between fixed inset-x-0 top-0 z-50 transition-[background-color,box-shadow,backdrop-filter] duration-300 bg-white/50 text-black backdrop-blur-sm shadow-xl`}
     >
       <nav
+        id="primary-navigation"
         className="relative mx-auto flex w-[calc(100%-1rem)] max-w-400 items-center justify-between gap-6 py-3 min-[721px]:w-[calc(100%-2rem)] min-[721px]:py-4"
         aria-label="Main navigation"
       >
@@ -56,6 +57,7 @@ const Header = () => {
             <a
               key={item.name}
               href={item.href}
+              aria-label={`Navigate to ${item.name} section`}
               className={`relative inline-block text-[0.96rem] font-semibold no-underline transition-[color,padding-left] duration-200 after:absolute after:bottom-[-0.35rem] after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-[#25d366] after:transition-transform after:duration-300 after:content-[''] hover:after:scale-x-100 focus-visible:outline-none focus-visible:after:scale-x-100 max-[640px]:w-full max-[640px]:whitespace-nowrap max-[640px]:py-1 max-[640px]:text-[0.85rem] max-[640px]:text-white hover:pl-1 ${
                 isScrolled
                   ? 'text-black hover:text-[#25d366] focus-visible:text-neutral-800'
@@ -83,7 +85,7 @@ const Header = () => {
         <a
           className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-[#25d366] px-4 py-[0.7rem] font-bold text-[#081b11] no-underline shadow-[0_5px_10px_rgba(37,211,102,0.28)] transition-[transform,box-shadow] duration-200 hover:-translate-y-px hover:shadow-[0_10px_15px_rgba(37,211,102,0.35)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#25d366] max-[640px]:hidden max-[640px]:px-[0.8rem] max-[640px]:py-[0.6rem] max-[640px]:text-[0.8rem]"
           href="#contact"
-          aria-label="WhatsApp"
+          aria-label="Chat with WoodVillage on WhatsApp"
           onClick={closeMenu}
         >
           <FaWhatsapp aria-hidden="true" />

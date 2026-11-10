@@ -128,7 +128,7 @@ const fullWidth = {width: "100%"}
 const Home = () => {
   return(
     <div className="w-auto p-auto bg-green-950">
-      <section id="home" className="scroll-mt-24 relative isolate flex flex-col text-white overflow-hidden bg-green-950 p-6 pt-26 sm:pt-40 sm:px-20">
+      <section id="home" className="scroll-mt-24 relative isolate flex flex-col text-white overflow-hidden bg-green-950 p-6 pt-26 sm:pt-40 sm:px-20" aria-label="Home section">
         <div
           aria-hidden="true"
           className="absolute inset-0 -z-10 bg-cover bg-center"
@@ -176,21 +176,27 @@ const Home = () => {
             />
         <div className="relative text-sm font-semibold py-3.5 flex flex-col sm:flex-row gap-3">
           <Button
-            render={<a href="#species" />}
+            render={<a href="#species" aria-label="View wood species" />}
             className="bg-[#2E7D32] p-8 py-6 mr-1.5 hover:bg-[#3a8a3e] hover:cursor-pointer"
           >
             View Our Wood Species
           </Button>
-          <Button className="border-0 bg-transparent p-8 sm:ml-1.5 py-6 ring-1 ring-inset ring-white hover:cursor-pointer hover:bg-white/20">Contact Us On Whatsapp</Button>
+          <Button
+            render={<a href="https://wa.me/233558554524" target="_blank" rel="noreferrer" aria-label="Contact us on WhatsApp" />}
+            className="border-0 bg-transparent p-8 sm:ml-1.5 py-6 ring-1 ring-inset ring-white hover:cursor-pointer hover:bg-white/20"
+          >
+            Contact Us On Whatsapp
+          </Button>
         </div>
       </section>
-      <section className="flex bg-[#FFFFFF] justify-items-center py-5 px-4 flex-col sm:flex-row gap-6 sm:gap-0 justify-center">
+      <section className="flex bg-[#FFFFFF] justify-items-center py-5 px-4 flex-col sm:flex-row gap-6 sm:gap-0 justify-center" aria-label="Company assurances">
         {assurances.map((assurance, index) => (
           <div
             key={index}
             className="flex flex-1 border-0 items-center min-h-10 h-auto"
+            aria-label={`${assurance.title}: ${assurance.description}`}
           >
-            <img src={assurance.icon} alt={assurance.alt} className="h-7 mr-0.5 w-7 object-contain" />
+            <img src={assurance.icon} alt="" aria-hidden="true" className="h-7 mr-0.5 w-7 object-contain" />
             <div className="flex flex-col ml-2">
               <h4 className="text-black font-semibold text-sm m-0.5">{assurance.title}</h4>
               <p className="text-[#626960] font-semibold text-xs m-0.5">{assurance.description}</p>
@@ -199,7 +205,7 @@ const Home = () => {
           ))
         }
       </section>
-      <section className="flex bg-[#E8DFD0] flex-col justify-items-center sm:p-20 py-12 px-6">
+      <section className="flex bg-[#E8DFD0] flex-col justify-items-center sm:p-20 py-12 px-6" aria-labelledby="trusted-partner-heading">
         <div className="">
           <TextMotion
               as="p"
@@ -245,7 +251,7 @@ const Home = () => {
          className="h-72 w-full rounded-lg border border-border bg-transparent">
         </TiltedGridHero>
       </section>
-      <section className="flex flex-col bg-[#F7F5F0] justify-items-center sm:p-20 py-12 px-6  ">
+      <section className="flex flex-col bg-[#F7F5F0] justify-items-center sm:p-20 py-12 px-6" aria-label="What we do section">
         <div>
           <TextMotion
               as="p"
@@ -275,12 +281,13 @@ const Home = () => {
           variants={processingStepsContainer}
           initial="hidden"
           whileInView="visible" viewport={{ once: true, amount: 0.2 }} className="flex flex-col sm:flex-row gap-4 justify-between mt-10 flex-wrap"
+          aria-label="Timber processing steps"
         >
           {
             processingSteps.map((step, index) => (
-              <motion.div key={index} variants={processingStepVariant} className="flex flex-col bg-white rounded-xl p-5 basis-44 grow">
+              <motion.div key={index} variants={processingStepVariant} className="flex flex-col bg-white rounded-xl p-5 basis-44 grow" aria-label={`Step ${index + 1}: ${step.title}`}>
                 <div className="h-10 w-10">
-                  <img src={step.icon} alt="Item Icon" aria-hidden="true" className="h-3/4 w-3/4 object-contain" />
+                  <img src={step.icon} alt="" aria-hidden="true" className="h-3/4 w-3/4 object-contain" />
                 </div>
                 <div className="text-black font-bold text-xl p-1.5 pl-0.5">{step.title}</div>
                 <div className="text-[#626960] text-sm p-0.5">{step.description}</div>
@@ -289,7 +296,7 @@ const Home = () => {
           }
         </motion.div>
       </section>
-      <section className="px-6 py-12 sm:p-14 bg-[#2E7D32]">
+      <section className="px-6 py-12 sm:p-14 bg-[#2E7D32]" aria-label="Custom size section">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-8">
           <div>
             <div>
@@ -322,7 +329,12 @@ const Home = () => {
             </div>
           </div>
           <div>
-            <Button className="border-0 bg-transparent p-8 ml-1.5 py-6 ring-1 ring-inset ring-white hover:cursor-pointer hover:bg-white/20 ">Contact Us On Whatsapp</Button>
+            <Button
+              render={<a href="https://wa.me/233558554524" target="_blank" rel="noreferrer" aria-label="Contact us on WhatsApp" />}
+              className="border-0 bg-transparent p-8 ml-1.5 py-6 ring-1 ring-inset ring-white hover:cursor-pointer hover:bg-white/20"
+            >
+              Contact Us On Whatsapp
+            </Button>
           </div>
         </div>
       </section>

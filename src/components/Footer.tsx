@@ -17,19 +17,20 @@ const Footer = () => {
   ];
 
   return (
-    <section className="scroll-mt-24 flex gap-6 sm:flex-row flex-col bg-[#182C20] text-white justify-between items-start sm:p-15 py-12 px-6">
+    <footer className="scroll-mt-24 flex gap-6 sm:flex-row flex-col bg-[#182C20] text-white justify-between items-start sm:p-15 py-12 px-6" aria-label="Footer">
       <div className="flex flex-col self-center ">
-        <img src={logo} alt="woodvillage logo" className="h-20 w-15 scale-200 object-contain self-center" />
+        <img src={logo} alt="WoodVillage Ghana logo" className="h-20 w-15 scale-200 object-contain self-center" />
         <div className="text-lg text-center w-full">Quality Ghanaian Timber</div>
       </div>
 
       <div>
-        <div className="font-bold text-sm mb-3">Quick Links</div>
+        <div className="font-bold text-sm mb-3" aria-label="Quick links heading">Quick Links</div>
         <div className="text-[#D6DFD4] text-sm">
           {quickLinks.map((link) => (
             <a
               key={link.label}
               href={link.href}
+              aria-label={`Navigate to ${link.label}`}
               className="my-2 flex items-center gap-2 text-[#D6DFD4] no-underline"
             >
               <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#D6DFD4]/10 text-xs text-[#F3F7F2]">
@@ -42,7 +43,7 @@ const Footer = () => {
       </div>
 
       <div>
-        <div className="font-bold text-sm mb-3">Get in Touch</div>
+        <div className="font-bold text-sm mb-3" aria-label="Get in touch heading">Get in Touch</div>
         <div className="text-[#D6DFD4] text-sm">
           <div className="mb-2 flex items-center gap-2 font-medium text-white">
             <FaPhone className="text-sm" />
@@ -75,11 +76,12 @@ const Footer = () => {
       </div>
 
       <div>
-        <div className="font-bold text-sm mb-3">Find Us</div>
+        <div className="font-bold text-sm mb-3" aria-label="Location heading">Find Us</div>
         <a
           href="https://maps.google.com/?q=Kasoa+Timber+Market+Bawjiase+Road+Kasoa+Ghana"
           target="_blank"
           rel="noreferrer"
+          aria-label="Open WoodVillage Ghana location in Google Maps"
           className="flex items-start gap-2 text-[#D6DFD4] text-sm no-underline"
         >
           <span className="mt-0.5 flex h-6 w-6 items-center justify-center rounded-full bg-[#D6DFD4]/10 text-[#F3F7F2]">
@@ -90,7 +92,7 @@ const Footer = () => {
           </span>
         </a>
       </div>
-    </section>
+    </footer>
   );
 };
 

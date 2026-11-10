@@ -1,5 +1,5 @@
 import TextMotion from "./ui/TextMotion";
-import { Button } from "./ui/button";
+import { Button } from "@/components/ui/button";
 import { FaEnvelopeOpen, FaEnvelopesBulk, FaPhone, FaLocationDot, FaComment } from 'react-icons/fa6'
 
 const Contact = () => {
@@ -13,7 +13,7 @@ const Contact = () => {
 
   return (
     <div id="contact" className="scroll-mt-24">
-      <section className="bg-[#1D3929] py-14 px-20 flex flex-col gap-5">
+      <section className="bg-[#1D3929] py-14 px-20 flex flex-col gap-5" aria-label="Contact banner section">
         <TextMotion
           as="h1"
           className="text-white font-bold text-5xl mt-3"
@@ -52,10 +52,10 @@ const Contact = () => {
             replay={false}
             style={{width: "100%"}}
           />
-          <div className="flex gap-4 flex-col max-w-3xl">
+          <div className="flex gap-4 flex-col max-w-3xl" aria-label="Contact information list">
             {
               contactPoints.map((contact) => (
-                <div key={contact.index} className="border border-[#DEDFD7] flex flex-row items-center p-6 rounded-sm">
+                <div key={contact.index} className="border border-[#DEDFD7] flex flex-row items-center p-6 rounded-sm" aria-label={`${contact.title}: ${typeof contact.details === 'string' ? contact.details : 'Contact information'}`}>
                   <div className="mr-4 flex h-12 w-12 items-center self-start justify-center rounded-lg bg-[#2E7D32]/10 text-[#2E7D32]">
                     {(() => {
                       const Icon = contact.icon;
@@ -69,7 +69,7 @@ const Contact = () => {
                 </div>
               ))
             }
-            <div className="flex items-center justify-between gap-4 border border-[#DEDFD7] p-6 rounded-sm">
+            <div className="flex items-center justify-between gap-4 border border-[#DEDFD7] p-6 rounded-sm" aria-label="WhatsApp contact information">
               <div className="flex flex-col gap-5 w-full">
                 <div className="flex items-center gap-4">
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-[#2E7D32]/10 text-[#2E7D32]">
@@ -81,7 +81,12 @@ const Contact = () => {
                   </div>
                 </div>
                 <div className="w-full">
-                  <Button className="w-full h-12 text-[14px] bg-[#2E7D32] hover:bg-[#3a8a3e]">Click to Chat</Button>
+                  <Button
+                    render={<a href="https://wa.me/233558554524" target="_blank" rel="noreferrer" aria-label="Chat with WoodVillage on WhatsApp" />}
+                    className="w-full h-12 text-[14px] bg-[#2E7D32] hover:bg-[#3a8a3e]"
+                  >
+                    Click to Chat
+                  </Button>
                 </div>
               </div>
             </div>

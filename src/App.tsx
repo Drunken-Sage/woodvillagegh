@@ -8,11 +8,19 @@ import Contact from './components/Contact'
 function App() {
   return (
     <div className="min-h-screen w-full bg-white">
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded focus:bg-white focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-[#1D3929]"
+      >
+        Skip to main content
+      </a>
       <Header />
-      <Home />
-      <About />
-      <Products />
-      <Contact />
+      <main id="main-content" className="focus:outline-none">
+        <Home />
+        <About />
+        <Products />
+        <Contact />
+      </main>
       <Footer />
     </div>
   );

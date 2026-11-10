@@ -148,7 +148,7 @@ const services = [
   }
 ]
   return (
-    <section id="products" className="scroll-mt-24">
+    <section id="products" className="scroll-mt-24" aria-label="Products section">
       <div className="flex gap-5 flex-col px-6 py-10 sm:py-14 sm:px-20 bg-[#1D3929]">
         <TextMotion
             as="h2"
@@ -174,7 +174,7 @@ const services = [
             style={{width: "100%"}}
           />
       </div>
-      <div id="species" className="scroll-mt-24 bg-[#EEE6D6] sm:py-16 sm:px-20 px-6 py-12 flex flex-col gap-10">
+      <div id="species" className="scroll-mt-24 bg-[#EEE6D6] sm:py-16 sm:px-20 px-6 py-12 flex flex-col gap-10" aria-label="Wood species section">
         <TextMotion
               as="h3"
               className="font-bold text-3xl text-[#1F2421] tracking-tight"
@@ -190,7 +190,7 @@ const services = [
         <div className="bg-[#EEE6D6]">
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-5">
             {species.map((species) => (
-              <div key={species.index} className="flex flex-col gap-3 border-gray max-w-90">
+              <div key={species.index} className="flex flex-col gap-3 border-gray max-w-90" aria-label={`${species.species} wood species`}>
                 <Flashcard
                   className="max-w-md"
                   height="h-40"
@@ -217,12 +217,12 @@ const services = [
           </div>
         </div>
       </div>
-      <div className="bg-[#F7F5F0] sm:px-20 sm:py-14 flex flex-col gap-5 px-12 py-6">
+      <div className="bg-[#F7F5F0] sm:px-20 sm:py-14 flex flex-col gap-5 px-12 py-6" aria-label="Standard sizes available">
         <div className="text-[28px] sm:text-3xl font-bold tracking-tight">Standard Sizes Available</div>
         <div className="flex flex-wrap gap-3 rounded-xl justify-center">
           {size.map((size) => (
-            <div key={size.index} className="flex bg-white border-[#DEDFD7] border gap-3 items-center p-3 rounded-sm max-w-52 basis-44 grow min-w-40">
-              <img src={size.icon} alt={size.alt} className="h-6 w-6 object-contain"/>
+            <div key={size.index} className="flex bg-white border-[#DEDFD7] border gap-3 items-center p-3 rounded-sm max-w-52 basis-44 grow min-w-40" aria-label={`Wood size ${size.size}`}>
+              <img src={size.icon} alt="" aria-hidden="true" className="h-6 w-6 object-contain"/>
               <div className="text-[#1F2421] text-xl font-bold tracking-tight sm:tracking-normal">{size.size}</div>
             </div>
           ))}
@@ -250,10 +250,10 @@ const services = [
           <div className='flex gap-5 flex-col'>
             {
               services.map((service) =>
-                <div key={service.index} className='flex flex-col gap border p-6 rounded-lg border-[#DEDFD7] bg-[#EDF4EA]'>
+                <div key={service.index} className='flex flex-col gap border p-6 rounded-lg border-[#DEDFD7] bg-[#EDF4EA]' aria-label={`${service.title}: ${service.description}`}>
                   <div className='flex flex-row justify-between w-full'>
-                    <img src={service.icon} alt="card icon" className='h-15 w-15'/>
-                    <div className='self-center text-[#8B5E3C] font-semibold'>{service.index}.</div>
+                    <img src={service.icon} alt="" aria-hidden="true" className='h-15 w-15'/>
+                    <div className='self-center text-[#8B5E3C] font-semibold' aria-label={`Service number ${service.index}`}>{service.index}.</div>
                   </div>
                   <div className="text-black font-bold text-xl mb-5">{service.title}</div>
                   <div className='text-[#626960] text-sm'>{service.description}</div>
