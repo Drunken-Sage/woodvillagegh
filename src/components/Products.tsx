@@ -150,8 +150,9 @@ const services = [
   return (
     <section id="products" className="scroll-mt-24">
       <div className="flex gap-5 flex-col px-6 py-10 sm:py-14 sm:px-20 bg-[#1D3929]">
-        <h2 className='text-white font-bold text-3xl sm:text-5xl max-w-5xl tracking-tight'>
-          <TextMotion
+        <TextMotion
+            as="h2"
+            className="text-white font-bold text-3xl sm:text-5xl max-w-5xl tracking-tight"
             text="Premium Wood Species & Custom Sizes"
             preset="neon"
             trigger="onView"
@@ -160,9 +161,9 @@ const services = [
             replay={false}
             style={{width: "100%"}}
           />
-        </h2>
-        <span className="text-[#D6DFD4] text-sm sm:text-lg">
-          <TextMotion
+        <TextMotion
+            as="p"
+            className="text-[#D6DFD4] text-sm sm:text-lg"
             text="We deal in all kinds of wood product, specializing in highly sought-after Ghanaian species."
             preset="slide"
             trigger="onView"
@@ -172,12 +173,11 @@ const services = [
             replay={false}
             style={{width: "100%"}}
           />
-        </span>
       </div>
       <div id="species" className="scroll-mt-24 bg-[#EEE6D6] sm:py-16 sm:px-20 px-6 py-12 flex flex-col gap-10">
-        <div className="font-bold text-3xl text-[#1F2421] tracking-tight">
-          <h3>
-            <TextMotion
+        <TextMotion
+              as="h3"
+              className="font-bold text-3xl text-[#1F2421] tracking-tight"
               text="Species We Offer"
               preset="drop"
               trigger="onView"
@@ -187,8 +187,6 @@ const services = [
               replay={false}
               style={{width: "100%"}}
             />
-          </h3>
-        </div>
         <div className="bg-[#EEE6D6]">
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-5">
             {species.map((species) => (
@@ -237,8 +235,9 @@ const services = [
         </div>
       </div>
       <div className='sm:px-20 sm:py-16 py-12 px-6 flex flex-col gap-8'>
-          <div className='font-bold text-3xl'>
-            <TextMotion
+          <TextMotion
+              as="h2"
+              className="font-bold text-3xl"
               text="Our Services"
               preset="split"
               trigger="onView"
@@ -248,7 +247,6 @@ const services = [
               replay={false}
               style={{width: "100%"}}
             />
-          </div>
           <div className='flex gap-5 flex-col'>
             {
               services.map((service) =>

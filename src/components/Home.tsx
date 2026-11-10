@@ -140,6 +140,7 @@ const Home = () => {
         />
         <div className="relative text-xs text-[#D6DFD4] py-3.5 sm:text-sm">
           <TextMotion
+              as="p"
               text="GHANAIAN LOCAL TIMBER EXPERTISE"
               preset="fade"
               trigger="onView"
@@ -149,13 +150,9 @@ const Home = () => {
               style={{width: "100%"}}
             />
         </div>
-        <div className="relative max-w-5xl whitespace-normal text-3xl font-bold py-3.5 sm:text-5xl"
-          role="heading"
-          aria-level={1}
-          aria-label="Quality Ghanaian Timber, From the Forest to Your Site."
-          >
-            <div aria-hidden="true">
-              <TextMotion
+        <TextMotion
+              as="h1"
+              className="relative max-w-5xl whitespace-normal text-3xl font-bold py-3.5 sm:text-5xl"
                 text="Quality Ghanaian Timber, From the Forest to Your Site."
                 preset="wipe"
                 trigger="onView"
@@ -166,10 +163,9 @@ const Home = () => {
                 style={fullWidth}
                 intensity={0.2}
               />
-            </div>
-        </div>
-        <div className="relative max-w-2xl whitespace-normal sm:text-lg text-{#D6DFD4] py-3.5 text-sm">
-          <TextMotion
+        <TextMotion
+            as="p"
+            className="relative max-w-2xl whitespace-normal sm:text-lg text-{#D6DFD4] py-3.5 text-sm"
             text="Procuring, processing, and delivering premium logs, boards, and planks from the Ashanti Region to Kasoa Timber Market and beyond."
             preset="rise"
             trigger="onMount"
@@ -178,7 +174,6 @@ const Home = () => {
             replay={false}
             style={fullWidth}
             />
-        </div>
         <div className="relative text-sm font-semibold py-3.5 flex flex-col sm:flex-row gap-3">
           <Button
             render={<a href="#species" />}
@@ -206,8 +201,9 @@ const Home = () => {
       </section>
       <section className="flex bg-[#E8DFD0] flex-col justify-items-center sm:p-20 py-12 px-6">
         <div className="">
-          <span className="text-[#8B5E3C] text-xs font-semibold">
-            <TextMotion
+          <TextMotion
+              as="p"
+              className="text-[#8B5E3C] text-xs font-semibold"
               text="ROOTED IN GHANA"
               preset="drop"
               trigger="onView"
@@ -217,11 +213,10 @@ const Home = () => {
               splitBy="word"
               style={{width: "100%"}}
             />
-          </span>
         </div>
-        <h2 className=" my-5">
-          <span className="text-3xl font-bold">
-            <TextMotion
+        <TextMotion
+              as="h2"
+              className="my-5 text-3xl font-bold"
               text="Your Trusted Partner in Timber Trade"
               preset="drop"
               trigger="onView"
@@ -232,10 +227,9 @@ const Home = () => {
               splitBy="word"
               style={{width: "100%"}}
             />
-          </span>
-        </h2>
-        <span className="text-base text-[#626960] ">
-          <TextMotion
+        <TextMotion
+          as="p"
+          className="text-base text-[#626960]"
             text="Woodvillage Ghana Ltd. is a leading supplier of high-quality wood products. We manage the entire process, from sustainable procurement in the Ashanti Region forests to precision processing into boards and planks. Whether you are an individual builder or a large-scale distributor, we deliver the right wood at the right size."
             preset="drop"
             trigger="onView"
@@ -246,7 +240,6 @@ const Home = () => {
             replay={false}
             style={{width: "100%"}}
           />
-        </span>
         <TiltedGridHero
          images={timberGalleryImages}
          className="h-72 w-full rounded-lg border border-border bg-transparent">
@@ -254,8 +247,9 @@ const Home = () => {
       </section>
       <section className="flex flex-col bg-[#F7F5F0] justify-items-center sm:p-20 py-12 px-6  ">
         <div>
-          <span className="text-[#8B5E3C] text-xs font-semibold">
-            <TextMotion
+          <TextMotion
+              as="p"
+              className="text-[#8B5E3C] text-xs font-semibold"
               text="WHAT WE DO"
               preset="slide"
               trigger="onView"
@@ -264,11 +258,10 @@ const Home = () => {
               replay={false}
               style={{width: "100%"}}
             />
-          </span>
         </div>
-        <div>
-          <span className="sm:text-3xl font-bold text-2xl">
-            <TextMotion
+        <TextMotion
+              as="h2"
+              className="sm:text-3xl font-bold text-2xl"
               text="Timber support, at every step."
               preset="slide"
               trigger="onView"
@@ -278,8 +271,6 @@ const Home = () => {
               replay={false}
               style={{width: "100%"}}
             />
-            </span>
-        </div>
         <motion.div
           variants={processingStepsContainer}
           initial="hidden"
@@ -301,9 +292,10 @@ const Home = () => {
       <section className="px-6 py-12 sm:p-14 bg-[#2E7D32]">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-8">
           <div>
-            <div className="font-bold text-3xl text-white mb-2">
-              <span>
-                <TextMotion
+            <div>
+              <TextMotion
+                as="h2"
+                className="font-bold text-3xl text-white mb-2"
                   text="Need a custom size? Talk to us today."
                   preset="pop"
                   trigger="onView"
@@ -312,12 +304,12 @@ const Home = () => {
                   splitBy="word"
                   replay={false}
                   style={{width: "100%"}}
-                />
-              </span>
+              />
             </div>
             <div>
-              <span className="text-white">
-                <TextMotion
+              <TextMotion
+                  as="p"
+                  className="text-white"
                   text="Tell us the dimensions and quantity you need."
                   preset="pop"
                   trigger="onView"
@@ -327,7 +319,6 @@ const Home = () => {
                   replay={false}
                   style={{width: "100%"}}
                 />
-              </span>
             </div>
           </div>
           <div>

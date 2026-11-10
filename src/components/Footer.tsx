@@ -17,7 +17,7 @@ const Footer = () => {
   ];
 
   return (
-    <section id="contact" className="scroll-mt-24 flex gap-6 sm:flex-row flex-col bg-[#182C20] text-white justify-between items-start sm:p-15 py-12 px-6">
+    <section className="scroll-mt-24 flex gap-6 sm:flex-row flex-col bg-[#182C20] text-white justify-between items-start sm:p-15 py-12 px-6">
       <div className="flex flex-col self-center ">
         <img src={logo} alt="woodvillage logo" className="h-20 w-15 scale-200 object-contain self-center" />
         <div className="text-lg text-center w-full">Quality Ghanaian Timber</div>

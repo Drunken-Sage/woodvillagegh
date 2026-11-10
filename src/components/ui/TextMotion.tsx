@@ -307,6 +307,8 @@ const spread = (seed: number, salt: number) => (pseudoRandom(seed * 3 + salt) - 
 /* -------------------------------------------------------------------------- */
 
 export interface TextMotionProps {
+  /** HTML element rendered for the text block. */
+  as?: "div" | "span" | "p" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6"
   text?: string
   preset?: PresetName
   trigger?: Trigger
@@ -401,6 +403,7 @@ export default function TextMotion(props: TextMotionProps) {
     demoInactiveOpacity = 0.3,
     demoAlign = "center",
     demoPosition = "below",
+    as = "div",
     color,
     className,
     style,
@@ -409,7 +412,10 @@ export default function TextMotion(props: TextMotionProps) {
   const prefersReducedMotion = useReducedMotion()
   const forceVisible = skipAnimation || Boolean(prefersReducedMotion)
 
-  const ref = useRef<HTMLDivElement>(null)
+  const ref = useRef<HTMLElement>(null)
+  const setRef = useCallback((node: HTMLElement | null) => {
+    ref.current = node
+  }, [])
   const [hovered, setHovered] = useState(false)
   const [cycle, setCycle] = useState(0)
   const [sectionVisible, setSectionVisible] = useState(false)
@@ -725,8 +731,6 @@ export default function TextMotion(props: TextMotionProps) {
     marginBottom: "-0.15em",
   }
 
-  const isFilled = style?.width === "100%"
-
   /** Liquid, dissolve and melt distort the whole text block, so the filter goes on a wrapper. */
   const turbulenceWrapStyle: CSSProperties = usesTurbulence
     ? { filter: `url(#${filterId})`, willChange: "filter" }
@@ -773,7 +777,7 @@ export default function TextMotion(props: TextMotionProps) {
   }
 
   const demoPanelEl = demoPanel ? (
-    <div
+    <span
       key="demo-panel"
       role="group"
       aria-label="Preset demo"
@@ -817,23 +821,20 @@ export default function TextMotion(props: TextMotionProps) {
           />
         )
       })}
-    </div>
+    </span>
   ) : null
 
+  const Root = as
+
   return (
-    <div
-      ref={ref}
+    <Root
+      ref={setRef}
       className={className}
       onMouseEnter={forceVisible ? undefined : () => startTransition(() => setHovered(true))}
       onMouseLeave={forceVisible ? undefined : () => startTransition(() => setHovered(false))}
       style={{
         ...style,
-        position: "relative",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        color: color ?? style?.color ?? "inherit",
-        ...(isFilled ? null : { minWidth: "max-content" }),
+        ...(color !== undefined ? { color } : {}),
       }}
     >
       {demoPosition === "above" && demoPanelEl}
@@ -865,9 +866,9 @@ export default function TextMotion(props: TextMotionProps) {
         </svg>
       )}
 
-      <div style={turbulenceWrapStyle}>
+      <span style={{ ...turbulenceWrapStyle, display: "block" }}>
         {indexed.map((units, li) => (
-          <div key={`${cycle}-${li}`} style={{ display: "block", whiteSpace: "pre-wrap" }}>
+          <span key={`${cycle}-${li}`} style={{ display: "block", whiteSpace: "pre-wrap" }}>
             {units.map((u, ui) => {
               if (u.isSpace) return <span key={ui}>{u.unit}</span>
               if (u.chars) {
@@ -879,11 +880,11 @@ export default function TextMotion(props: TextMotionProps) {
               }
               return renderToken(u.unit, u.index, ui)
             })}
-          </div>
+          </span>
         ))}
-      </div>
+      </span>
 
       {demoPosition === "below" && demoPanelEl}
-    </div>
+    </Root>
   )
 }
