@@ -12,7 +12,7 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  base: '/woodvillagegh/',
+  base: process.env.VERCEL ? "/" : "/woodvillagegh/",
     resolve: {
       alias: {
         "@": path.resolve(__dirname, "src"),
