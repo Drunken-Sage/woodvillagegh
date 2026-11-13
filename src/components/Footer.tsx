@@ -7,6 +7,7 @@ import {
   FaPhone,
 } from 'react-icons/fa6';
 import logo from '../assets/images/WoodVillage Ghana Logo.avif';
+import { contactInfo, formatInternationalPhone } from '@/lib/contactInfo';
 
 const Footer = () => {
   const quickLinks = [
@@ -50,27 +51,21 @@ const Footer = () => {
             <span>Phone:</span>
           </div>
           <div className="ml-1 space-y-1">
-            <a href="tel:+233504537373" className="flex items-center gap-2 text-[#D6DFD4] no-underline">
-              <span className="text-xs text-[#F3F7F2]">•</span>
-              +233 (0)50-453-7373
-            </a>
-            <a href="tel:+233550573773" className="flex items-center gap-2 text-[#D6DFD4] no-underline">
-              <span className="text-xs text-[#F3F7F2]">•</span>
-              +233 (0)55-507-7373
-            </a>
-            <a href="tel:+233558554524" className="flex items-center gap-2 text-[#D6DFD4] no-underline">
-              <span className="text-xs text-[#F3F7F2]">•</span>
-              +233 (0)55-855-4524
-            </a>
+            {contactInfo.footerPhones.map(({ phone, href }) => (
+              <a key={phone} href={href} className="flex items-center gap-2 text-[#D6DFD4] no-underline">
+                <span className="text-xs text-[#F3F7F2]">•</span>
+                {formatInternationalPhone(phone)}
+              </a>
+            ))}
           </div>
 
           <div className="mt-3 flex items-center gap-2 font-medium text-white">
             <FaEnvelope className="text-sm" />
             <span>Email:</span>
           </div>
-          <a href="mailto:oforiawuahp@gmail.com" className="ml-1 mt-1 flex items-center gap-2 text-[#D6DFD4] no-underline">
+          <a href={`mailto:${contactInfo.footerEmail}`} className="ml-1 mt-1 flex items-center gap-2 text-[#D6DFD4] no-underline">
             <span className="text-xs text-[#F3F7F2]">•</span>
-            oforiawuahp@gmail.com
+            {contactInfo.footerEmail}
           </a>
         </div>
       </div>

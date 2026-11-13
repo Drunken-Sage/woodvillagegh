@@ -26,6 +26,7 @@ import rulerIcon from '../assets/icons/ruler-100.webp';
 import truckIcon from '../assets/icons/semi-truck-side-view-50.webp';
 import warehouseIcon from '../assets/icons/warehouse-64.webp';
 import TextMotion from '../components/ui/TextMotion'
+import { contactInfo } from '@/lib/contactInfo';
 import { motion } from 'framer-motion';
 
 
@@ -138,7 +139,7 @@ const Home = () => {
             WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 100%)',
           }}
         />
-        <div className="relative text-xs text-[#D6DFD4] py-3.5 sm:text-sm">
+        <div className="relative text-xs text-[#D6DFD4] py-3.5 sm:text-sm tracking-wider">
           <TextMotion
               as="p"
               text="GHANAIAN LOCAL TIMBER EXPERTISE"
@@ -152,7 +153,7 @@ const Home = () => {
         </div>
         <TextMotion
               as="h1"
-              className="relative max-w-5xl whitespace-normal text-3xl font-bold py-3.5 sm:text-5xl"
+              className="relative max-w-5xl whitespace-normal text-3xl font-bold py-3.5 sm:text-5xl tracking-tighter"
                 text="Quality Ghanaian Timber, From the Forest to Your Site."
                 preset="wipe"
                 trigger="onView"
@@ -182,7 +183,7 @@ const Home = () => {
             View Our Wood Species
           </Button>
           <Button
-            render={<a href="https://wa.me/233558554524" target="_blank" rel="noreferrer" aria-label="Contact us on WhatsApp" />}
+            render={<a href={`https://wa.me/${contactInfo.whatsappPhone}`} target="_blank" rel="noreferrer" aria-label="Contact us on WhatsApp" />}
             className="border-0 bg-transparent p-8 sm:ml-1.5 py-6 ring-1 ring-inset ring-white hover:cursor-pointer hover:bg-white/20"
           >
             Contact Us On Whatsapp
@@ -209,7 +210,7 @@ const Home = () => {
         <div className="">
           <TextMotion
               as="p"
-              className="text-[#8B5E3C] text-xs font-semibold"
+              className="text-[#8B5E3C] text-xs font-semibold tracking-wider"
               text="ROOTED IN GHANA"
               preset="drop"
               trigger="onView"
@@ -222,7 +223,7 @@ const Home = () => {
         </div>
         <TextMotion
               as="h2"
-              className="my-5 text-3xl font-bold"
+              className="my-5 text-3xl font-bold tracking-tight"
               text="Your Trusted Partner in Timber Trade"
               preset="drop"
               trigger="onView"
@@ -255,7 +256,7 @@ const Home = () => {
         <div>
           <TextMotion
               as="p"
-              className="text-[#8B5E3C] text-xs font-semibold"
+              className="text-[#8B5E3C] text-xs font-semibold tracking-wider"
               text="WHAT WE DO"
               preset="slide"
               trigger="onView"
@@ -267,7 +268,7 @@ const Home = () => {
         </div>
         <TextMotion
               as="h2"
-              className="sm:text-3xl font-bold text-2xl"
+              className="sm:text-3xl font-bold text-2xl tracking-tight"
               text="Timber support, at every step."
               preset="slide"
               trigger="onView"
@@ -302,7 +303,7 @@ const Home = () => {
             <div>
               <TextMotion
                 as="h2"
-                className="font-bold text-3xl text-white mb-2"
+                className="font-bold text-3xl text-white mb-2 tracking-tight"
                   text="Need a custom size? Talk to us today."
                   preset="pop"
                   trigger="onView"
@@ -330,7 +331,7 @@ const Home = () => {
           </div>
           <div>
             <Button
-              render={<a href="https://wa.me/233558554524" target="_blank" rel="noreferrer" aria-label="Contact us on WhatsApp" />}
+              render={<a href={`https://wa.me/${contactInfo.whatsappPhone}`} target="_blank" rel="noreferrer" aria-label="Contact us on WhatsApp" />}
               className="border-0 bg-transparent p-8 ml-1.5 py-6 ring-1 ring-inset ring-white hover:cursor-pointer hover:bg-white/20"
             >
               Contact Us On Whatsapp

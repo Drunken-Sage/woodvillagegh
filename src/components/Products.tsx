@@ -188,9 +188,9 @@ const services = [
               style={{width: "100%"}}
             />
         <div className="bg-[#EEE6D6]">
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-5 place-items-center">
             {species.map((species) => (
-              <div key={species.index} className="flex flex-col gap-3 border-gray max-w-90" aria-label={`${species.species} wood species`}>
+              <div key={species.index} className="flex flex-col gap-3 border-gray w-full max-w-110 items-center" aria-label={`${species.species} wood species`}>
                 <Flashcard
                   className="max-w-md"
                   height="h-40"
@@ -234,10 +234,10 @@ const services = [
           <div className='text-[#1F2421]'>Need a specific dimension? We offer custom cutting and sizing. <span className='font-bold'>Other sizes can be specially ordered</span> to meet your exact project requirements.</div>
         </div>
       </div>
-      <div className='sm:px-20 sm:py-16 py-12 px-6 flex flex-col gap-8'>
+      <div className='justify-center sm:px-20 sm:py-16 py-12 px-6 flex flex-col gap-8'>
           <TextMotion
               as="h2"
-              className="font-bold text-3xl"
+              className="font-bold sm:text-3xl text-[28px]"
               text="Our Services"
               preset="split"
               trigger="onView"
@@ -247,10 +247,10 @@ const services = [
               replay={false}
               style={{width: "100%"}}
             />
-          <div className='flex gap-5 flex-col'>
+          <div className='flex gap-5 flex-col justify-center items-center'>
             {
               services.map((service) =>
-                <div key={service.index} className='flex flex-col gap border p-6 rounded-lg border-[#DEDFD7] bg-[#EDF4EA]' aria-label={`${service.title}: ${service.description}`}>
+                <div key={service.index} className='flex flex-col gap border p-6 rounded-lg border-[#DEDFD7] bg-[#EDF4EA] max-w-4xl' aria-label={`${service.title}: ${service.description}`}>
                   <div className='flex flex-row justify-between w-full'>
                     <img src={service.icon} alt="" aria-hidden="true" className='h-15 w-15'/>
                     <div className='self-center text-[#8B5E3C] font-semibold' aria-label={`Service number ${service.index}`}>{service.index}.</div>

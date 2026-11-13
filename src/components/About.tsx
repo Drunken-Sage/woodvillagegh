@@ -16,7 +16,7 @@ const About = () => {
           }}>
         <TextMotion
               as="p"
-              className="text-[#D6DFD4] text-sm"
+              className="text-[#D6DFD4] sm:text-sm text-[11px] tracking-wider"
               text="WOODVILLAGE GHANA LTD."
               preset="shear"
               trigger="onView"
@@ -27,7 +27,7 @@ const About = () => {
             />
         <TextMotion
               as="h1"
-              className="text-white font-bold text-5xl mt-3"
+              className="text-white font-bold sm:text-5xl mt-3 text-3xl tracking-tighter"
               text="About Us"
               preset="slide"
               trigger="onView"
@@ -41,7 +41,7 @@ const About = () => {
         <div className=" flex flex-col gap-3">
           <TextMotion
               as="p"
-              className="font-semibold text-xs text-[#8B5E3C]"
+              className="font-semibold text-xs text-[#8B5E3C] tracking-wider"
               text="OUR STORY"
               preset="slide"
               trigger="onView"
@@ -53,7 +53,7 @@ const About = () => {
             />
           <TextMotion
               as="h2"
-              className="font-bold text-3xl mb-3"
+              className="font-bold text-3xl mb-3 tracking-tight"
               text="Rooted in Quality, Growing with Trust"
               preset="slide"
               trigger="onView"
@@ -111,7 +111,7 @@ const About = () => {
       <section className="py-12 px-6 sm:p-20 flex gap-3 flex-col bg-[#EDF4EA]" aria-label="Our team section">
         <TextMotion
               as="p"
-              className="font-semibold text-xs text-[#8B5E3C]"
+              className="font-semibold text-xs text-[#8B5E3C] tracking-wider"
               text="THE PEOPLE BEHIND WOODVILLAGE"
               preset="slide"
               trigger="onView"
@@ -123,7 +123,7 @@ const About = () => {
           />
         <TextMotion
               as="h2"
-              className="font-bold text-3xl"
+              className="font-bold text-3xl tracking-tight"
               text="Our team"
               preset="slide"
               trigger="onView"
@@ -165,7 +165,7 @@ const About = () => {
         </div>
       </section>
       <section className="px-6 py-12 sm:p-14 bg-[#2E7D32]">
-        <div className="flex items-center justify-between flex-col sm:flex-row gap-6 sm:gap3">
+        <div className="flex items-center justify-between flex-col sm:flex-row gap-6 sm:gap3 tracking-tight">
           <TextMotion
               as="h2"
               className="font-bold text-3xl text-white mb-2"
