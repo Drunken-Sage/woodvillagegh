@@ -1,7 +1,7 @@
 import TextMotion from "./ui/TextMotion";
 import { Button } from "@/components/ui/button";
 import { FaEnvelopeOpen, FaEnvelopesBulk, FaPhone, FaLocationDot, FaComment } from 'react-icons/fa6'
-import { contactInfo } from "@/lib/contactInfo";
+import { contactInfo, generalInquiryWhatsAppUrl } from "@/lib/contactInfo";
 
 const Contact = () => {
 
@@ -97,7 +97,7 @@ const Contact = () => {
                 </div>
                 <div className="w-full">
                   <Button
-                    render={<a href={`https://wa.me/${contactInfo.whatsappPhone}`} target="_blank" rel="noreferrer" aria-label="Chat with WoodVillage on WhatsApp" />}
+                    render={<a href={generalInquiryWhatsAppUrl} target="_blank" rel="noreferrer" aria-label="Chat with WoodVillage on WhatsApp" />}
                     className="w-full h-12 text-[14px] bg-[#2E7D32] hover:bg-[#3a8a3e]"
                   >
                     Click to Chat

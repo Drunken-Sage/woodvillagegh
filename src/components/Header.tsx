@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import logo from '../assets/images/logo.png';
 import { FaWhatsapp } from 'react-icons/fa';
+import { generalInquiryWhatsAppUrl } from '@/lib/contactInfo';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -84,7 +85,9 @@ const Header = () => {
 
         <a
           className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-[#25d366] px-4 py-[0.7rem] font-bold text-[#081b11] no-underline shadow-[0_5px_10px_rgba(37,211,102,0.28)] transition-[transform,box-shadow] duration-200 hover:-translate-y-px hover:shadow-[0_10px_15px_rgba(37,211,102,0.35)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#25d366] max-[640px]:hidden max-[640px]:px-[0.8rem] max-[640px]:py-[0.6rem] max-[640px]:text-[0.8rem]"
-          href="#contact"
+          href={generalInquiryWhatsAppUrl}
+          target="_blank"
+          rel="noreferrer"
           aria-label="Chat with WoodVillage on WhatsApp"
           onClick={closeMenu}
         >

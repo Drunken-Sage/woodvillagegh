@@ -26,7 +26,7 @@ import rulerIcon from '../assets/icons/ruler-100.webp';
 import truckIcon from '../assets/icons/semi-truck-side-view-50.webp';
 import warehouseIcon from '../assets/icons/warehouse-64.webp';
 import TextMotion from '../components/ui/TextMotion'
-import { contactInfo } from '@/lib/contactInfo';
+import { generalInquiryWhatsAppUrl } from '@/lib/contactInfo';
 import { motion } from 'framer-motion';
 
 
@@ -183,7 +183,7 @@ const Home = () => {
             View Our Wood Species
           </Button>
           <Button
-            render={<a href={`https://wa.me/${contactInfo.whatsappPhone}`} target="_blank" rel="noreferrer" aria-label="Contact us on WhatsApp" />}
+            render={<a href={generalInquiryWhatsAppUrl} target="_blank" rel="noreferrer" aria-label="Contact us on WhatsApp" />}
             className="border-0 bg-transparent p-8 sm:ml-1.5 py-6 ring-1 ring-inset ring-white hover:cursor-pointer hover:bg-white/20"
           >
             Contact Us On Whatsapp
@@ -331,7 +331,7 @@ const Home = () => {
           </div>
           <div>
             <Button
-              render={<a href={`https://wa.me/${contactInfo.whatsappPhone}`} target="_blank" rel="noreferrer" aria-label="Contact us on WhatsApp" />}
+              render={<a href={generalInquiryWhatsAppUrl} target="_blank" rel="noreferrer" aria-label="Contact us on WhatsApp" />}
               className="border-0 bg-transparent p-8 ml-1.5 py-6 ring-1 ring-inset ring-white hover:cursor-pointer hover:bg-white/20"
             >
               Contact Us On Whatsapp

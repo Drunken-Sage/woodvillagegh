@@ -30,5 +30,12 @@ export const contactInfo = {
   whatsappDisplay: `${phones[1].slice(0, 4)}-${phones[1].slice(4, 7)}-${phones[1].slice(7)}`,
 };
 
+export const buildWhatsAppUrl = (message: string) =>
+  `https://wa.me/${contactInfo.whatsappPhone}?text=${encodeURIComponent(message)}`;
+
+export const generalInquiryWhatsAppUrl = buildWhatsAppUrl(
+  "Hello, I'm interested in WoodVillage's timber products. Please share current availability, sizes, and pricing.",
+);
+
 export const formatInternationalPhone = (phone: string) =>
   `+233 (0)${phone.slice(1, 3)}-${phone.slice(3, 6)}-${phone.slice(6)}`;
